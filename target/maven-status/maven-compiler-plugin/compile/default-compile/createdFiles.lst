@@ -1,0 +1,5 @@
+com\nisum\bo\Movie.class
+com\nisum\client\App.class
+com\nisum\dao\MovieDao.class
+com\nisum\Spring_EhCache\SpringBootWebApplication.class
+com\nisum\dao\MovieDaoImpl.class

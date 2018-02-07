@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="http://www.ehcache.org/ehcache.xsd"
+		updateCheck="true" 
+		monitoring="autodetect"
+		dynamicConfig="true">
+		<cache name="movieFindCache"
+			
+			maxElementsInMemory="2"
+			eternal="false"
+			timeToLiveSeconds="20000"
+			timeToIdleSeconds="10000"
+			memoryStoreEvictionPolicy="ep"
+			transactionalMode="off" >
+			
+			<cacheEventListenerFactory class="com.nisum.dao.MyCacheEventListenerFactory"/>
+			<searchable>
+       <searchAttribute name="name" expression="value.getName()"/>
+   </searchable>
+   </cache>
+		</ehcache>
